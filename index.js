@@ -40,7 +40,11 @@ var bst = new BinarySearchTree();
 bst.push(50);
 bst.push(22);
 bst.push(7);
+bst.push(44);
+bst.push(55);
+bst.push(124);
 bst.push(2);
+bst.push(92);
 bst.push(88);
 
 function dfs(node){
@@ -95,6 +99,14 @@ function findMax(node){
   return node.value;
 }
 
+function findHeight(node){
+  if(!node) return 0;
+  var leftHeight = findHeight(node.left);
+  var rightHeight = findHeight(node.right);
+
+  return Math.max(leftHeight, rightHeight) + 1;
+}
+
 console.log('DFS:');
 dfs(bst.root);
 console.log('Inorder:');
@@ -105,3 +117,5 @@ console.log('Postorder:');
 postorder(bst.root);
 console.log('Min:', findMin(bst.root));
 console.log('Max:', findMax(bst.root));
+
+console.log('Height:', findHeight(bst.root));
