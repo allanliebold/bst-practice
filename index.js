@@ -37,11 +37,11 @@ BinarySearchTree.prototype.push = function(val) {
 }
 
 var bst = new BinarySearchTree();
-bst.push(40);
-bst.push(25);
-bst.push(10);
-bst.push(32);
-bst.push(78);
+bst.push(50);
+bst.push(22);
+bst.push(7);
+bst.push(2);
+bst.push(88);
 
 function dfs(node){
   if(node){
